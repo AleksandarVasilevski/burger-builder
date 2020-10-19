@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 import classes from './Modal.module.css';
 import Aux from '../../../hoc/Auxiliary';
@@ -15,5 +16,10 @@ const modal = (props) => (
         </div>
     </Aux>
 );
+
+modal.propTypes = {
+    show: propTypes.bool.isRequired,
+    modalClosed: propTypes.func.isRequired
+}
 
 export default modal;
